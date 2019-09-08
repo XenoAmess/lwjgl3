@@ -355,6 +355,7 @@
             <compileBinding binding="bgfx"/>
             <compileBinding binding="bullet"/>
             <compileBinding binding="cuda"/>
+            <compileBinding binding="driftfx"/>
             <compileBinding binding="egl"/>
             <compileBinding binding="jawt"/>
             <compileBinding binding="jemalloc"/>
@@ -648,6 +649,7 @@
             <include name="org/lwjgl/demo/bgfx/**" if:set="test.bgfx"/>
             <include name="org/lwjgl/demo/bullet/**" if:true="${binding.bullet}"/>
             <include name="org/lwjgl/demo/cuda/**" if:true="${binding.cuda}"/>
+            <include name="org/lwjgl/demo/driftfx/**" if:true="${binding.driftfx}"/>
             <include name="org/lwjgl/demo/egl/**" if:set="test.egl"/>
             <include name="org/lwjgl/demo/glfw/**" if:set="test.glfw"/>
             <include name="org/lwjgl/demo/llvm/**" if:true="${binding.llvm}"/>
@@ -1241,6 +1243,9 @@
 
         <!-- CUDA -->
         <release-module name="cuda" title="CUDA" if:true="${binding.cuda}"/>
+
+        <!-- DriftFX -->
+        <release-module name="driftfx" native-library="lwjgl_driftfx" title="DriftFX" if:true="${binding.driftfx}"/>
 
         <!-- EGL -->
         <release-module name="egl" title="EGL" if:true="${binding.egl}"/>
